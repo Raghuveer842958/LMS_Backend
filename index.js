@@ -11,10 +11,6 @@ import courseProgressRoute from "./routes/courseProgress.route.js";
 
 dotenv.config({});
 
-// console.log("SECRET_KEY:", process.env.SECRET_KEY);
-
-
-// call database connection here
 connectDB();
 const app = express();
 
@@ -25,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin: "https://lms-frontend-nine-flax.vercel.app/",
     credentials:true
 }));
  
