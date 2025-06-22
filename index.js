@@ -21,7 +21,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin: "https://lms-frontend-nine-flax.vercel.app/",
+    // origin: "https://lms-frontend-nine-flax.vercel.app/",
+    origin : "http://localhost:5173",
     credentials:true
 }));
  
@@ -36,5 +37,3 @@ app.use("/api/v1/progress", courseProgressRoute);
 app.listen(PORT, () => {
     console.log(`Server listen at port ${PORT}`);
 })
-
-
